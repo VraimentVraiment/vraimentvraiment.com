@@ -1,0 +1,17 @@
+header.stake-header {
+  & p.baseline {
+    @include slide-in(left, 1);
+  }
+}
+
+.stake-pagination nav.pagination {
+  background-color: $color-background;
+
+  & a.pagination-item {
+    @include slide-in(left, 1);
+  }
+}
+
+figure.punchline {
+  @include png-colors;
+}

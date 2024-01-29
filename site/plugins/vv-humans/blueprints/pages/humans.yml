@@ -1,0 +1,36 @@
+title: Humains
+
+icon: user
+
+extends: pages/mandatory
+
+tabs:
+
+  humans:
+    label: Humains
+    icon: users
+    columns:
+      - width: 2/3
+        sections:
+          drafts:
+            extends: sections/humans
+            label: Humains en brouillon
+            status: draft
+            empty: Aucun humain n'est en mode brouillon
+          listed:
+            extends: sections/humans
+            label: Humains publiés
+            status: listed
+            empty: Aucun humain n'est publié
+            status: listed
+            layout: cards
+            size: tiny
+      - width: 1/3
+        fields:
+          senioritylevels:
+            extends: fields/seniority-levels
+          expertises:
+            extends: fields/skills
+            label: Expertises
+          skills:
+            extends: fields/skills

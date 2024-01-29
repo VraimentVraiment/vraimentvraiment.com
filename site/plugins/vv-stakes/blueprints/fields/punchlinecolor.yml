@@ -1,0 +1,25 @@
+label: Couleur de la punchline
+
+type: radio
+
+default: blue
+
+options:
+  yellow:
+    value: yellow
+    text: Jaune
+  blue:
+    value: blue
+    text: Bleu
+  red:
+    value: red
+    text: Rouge
+  green:
+    value: green
+    text: Vert
+  orange:
+    value: orange
+    text: Orange
+  purple:
+    value: purple
+    text: Violet

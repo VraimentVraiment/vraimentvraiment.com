@@ -1,0 +1,29 @@
+footer.site-footer {
+  @include md {
+    & .column:not(:last-of-type, :first-of-type) {
+      margin: 0 auto;
+      width: fit-content;
+    }
+    
+    & .column:last-of-type {
+      margin-left: auto;
+      width: fit-content;
+    }
+  }
+
+  & p,
+  nav ul li {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 2;
+  }
+
+  & nav ul li a {
+    display: inline-block;
+    padding: 0.5rem 0;
+
+    @include md {
+      padding: 0;
+    }
+  }
+}

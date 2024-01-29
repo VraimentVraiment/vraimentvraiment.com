@@ -1,0 +1,26 @@
+/*
+ * --------- BREAKPOINTS ----------
+ */
+
+$breakpoints: (
+  sm: 375px,
+  md: 767px,
+  lg: 991px,
+  xl: 1447px,
+  xxl: 1920px
+);
+
+/*
+ * --------- COLORS ----------
+ */
+
+$vv-web-white: #fbfaf9;
+$vv-web-black: #333;
+$color-background: $vv-web-white;
+$color-font-dark: $vv-web-black;
+
+/*
+ * --------- SPACINGS ----------
+ */
+
+$header-height: 6rem;

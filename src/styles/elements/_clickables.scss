@@ -1,0 +1,143 @@
+@mixin link-hover {
+  color: white;
+
+  & svg {
+    fill: white;
+  }
+}
+
+.link-with-background:not(h1) {
+  cursor: pointer;
+  position: relative;
+
+  --link-animation-duration: 0s;
+
+  @include md {
+    --link-animation-duration: 0.3s;
+
+    transition: color var(--link-animation-duration) ease;
+
+    & svg {
+      transition: fill var(--link-animation-duration) ease;
+    }
+  }
+
+  /* separated from '&:hover' above because :focus-visible breaks block in Safari desktop */
+  &:focus-visible {
+    outline: none;
+
+    @include link-hover;
+  }
+
+  & .link-background {
+    position: absolute;
+    background: var(--background-color);
+    z-index: -1;
+    transform: scaleX(0);
+  }
+
+  &.--enter {
+    @include link-hover;
+
+    & .link-background {
+      animation: link-background-enter var(--link-animation-duration) ease-in-out forwards;
+    }
+  }
+
+  &.--leave {
+    & .link-background {
+      animation: link-background-leave var(--link-animation-duration) ease-in-out forwards;
+    }
+  }
+}
+
+@keyframes link-background-enter {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+
+  100% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+@keyframes link-background-leave {
+  0% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+
+  100% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+@mixin link-background-offset($offset-x, $offset-y) {
+  & .link-background {
+    inset: -$offset-y #{-$offset-x} #{-$offset-y} #{-$offset-x};
+  }
+}
+
+.site-logo {
+  & .link-background {
+    inset: -0.5em -0.35em;
+  }
+}
+
+#nav-toggler {
+  & .link-background {
+    inset: -0.35em;
+  }
+}
+
+a,
+.link,
+button {
+  & .link-background {
+    inset: -0.05em -0.25em;
+  }
+}
+
+.open nav a {
+  & .link-background {
+    inset: 0;
+  }
+}
+
+a.social-media-link {
+  & .link-background {
+    inset: 0 -0.2em;
+  }
+}
+
+.custom-link a {
+  & .link-background {
+    inset: -0.05em -0.25em;
+  }
+}
+
+.home .custom-link a {
+  & .link-background {
+    inset: -0.24em -0.2em;
+  }
+}
+
+.human {
+  & .link-background {
+    inset: 0;
+  }
+}
+
+.site-footer a:not(.social-media-link) {
+  & .link-background {
+    inset: 0.25em -0.15em;
+  }
+}

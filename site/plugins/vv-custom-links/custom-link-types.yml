@@ -1,0 +1,34 @@
+mail:
+  prefix: 'mailto:'
+  field_text_singular: Adresse email
+  field_text_plural: Adresses email
+  icon: i-ri-mail-line
+
+phone:
+  prefix: 'tel:'
+  field_text_singular: Numéro de téléphone
+  field_text_plural: Numéros de téléphone
+  icon: i-ri-phone-line
+
+location:
+  prefix: https://www.google.com/maps/search/
+  target: _blank
+  field_text_singular: Lieu
+  field_text_plural: Lieux
+  icon: i-ri-map-pin-2-line
+
+internallink:
+  field_text_singular: Lien interne
+  field_text_plural: Liens internes
+  icon: i-ri-arrow-right-line
+
+externallink:
+  prefix: ""
+  target: _blank
+  field_text_singular: Lien externe
+  field_text_plural: Liens externes
+  icon: i-ri-external-link-line
+
+social-media:
+  target: _blank
+  field_text_singular: Réseau social

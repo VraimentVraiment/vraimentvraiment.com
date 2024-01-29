@@ -1,0 +1,6 @@
+label: field.blocks.image.name
+type: files
+query: page.images.template("image")
+multiple: false
+uploads:
+  template: image

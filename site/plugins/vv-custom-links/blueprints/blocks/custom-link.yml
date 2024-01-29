@@ -1,0 +1,33 @@
+name: Lien personnalisé
+
+icon: url
+
+fields:
+
+  prefix: 
+    label: Préfixe
+    type: text
+
+  text: 
+    label: Texte du lien
+    type: text
+
+  link:
+    required: true
+    label: Lien
+    type: text
+
+  suffix: 
+    label: Suffixe
+    type: text
+
+  type: fields/custom-link-type
+
+  socialmedia:
+    extends: fields/social-media
+    when:
+      type: social-media
+    
+  inline: 
+    label: Inline
+    type: toggle

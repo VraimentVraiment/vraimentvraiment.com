@@ -1,0 +1,30 @@
+.k-block-container-type-icon {
+  align-items: center;
+}
+
+.k-block-type-icon .info {
+  color: grey;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.k-block-type-icon .text {
+  display: none;
+}
+
+.k-block-type-icon .image {
+  max-height: 4rem;
+  max-width: 4rem;
+  height: 100%;
+  display: inline-block;
+}
+
+.k-layouts .k-block-type-icon .image {
+  max-height: none;
+  max-width: none;
+}
+
+.k-block-type-icon img {
+  width: 100%;
+  height: 100%;
+}

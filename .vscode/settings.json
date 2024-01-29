@@ -1,0 +1,15 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  "stylelint.enable": true,
+  "stylelint.validate": [
+    "css",
+    "scss",
+    "source.css.styled",
+  ],
+  "css.validate": false,
+  "scss.validate": false,
+  "phpsab.fixerEnable": true,
+  "phpsab.snifferEnable": true,
+}

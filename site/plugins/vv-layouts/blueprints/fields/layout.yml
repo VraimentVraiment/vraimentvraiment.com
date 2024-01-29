@@ -1,0 +1,15 @@
+label: Contenu
+
+width: 1
+
+extends: fields/layout-settings
+
+fieldsets:
+  custom:
+    fieldsets:
+      nestedlayout:
+        name: Disposition
+        icon: grid-top-left
+        fields:
+          layout:
+            extends: fields/layout-settings

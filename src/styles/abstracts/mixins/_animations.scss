@@ -1,0 +1,68 @@
+@use 'sass:math';
+@use 'sass:map';
+
+$slide-offset-length: 1rem;
+$slide-timing-function: ease-out;
+$slide-duration: .6s;
+$coef: 0.75;
+$slide-order-map: (
+  1: .15,
+  2: .3,
+  3: .45,
+);
+
+@mixin hidden-right {
+  opacity: 0.001;
+  transform: translateX(-$slide-offset-length);
+}
+
+@mixin hidden-left {
+  opacity: 0.001;
+  transform: translateX($slide-offset-length);
+}
+
+@mixin shown {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@each $order-key, $start in ($slide-order-map) {
+    $end: $coef + $start * (1 - $coef);
+  
+    @keyframes slide-in-left-#{$order-key} {
+      0% {
+        @include hidden-right;
+      }
+
+  
+      #{$start * 100%} {
+        @include hidden-right;
+      }
+  
+      #{$end * 100%} {
+        @include shown;
+      }
+    }
+
+  @keyframes slide-in-right-#{$order-key} {
+    0% {
+      @include hidden-left;
+    }
+
+    #{$start * 100%} {
+      @include hidden-left;
+    }
+
+    #{$end * 100%} {
+      @include shown;
+    }
+  }
+}
+
+@mixin slide-in($direction, $order-key) {
+  animation: slide-in-#{$direction}-#{$order-key} $slide-duration $slide-timing-function forwards;
+}
+
+// @mixin slide-out($direction, $delay) {
+//   animation: slide-out-#{$direction}-#{$order-key} $slide-duration $slide-timing-function forwards;
+// }

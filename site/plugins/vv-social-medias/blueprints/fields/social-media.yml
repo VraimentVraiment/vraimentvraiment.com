@@ -1,0 +1,11 @@
+label: Réseau social
+
+type: radio
+
+required: true
+
+options: query
+query:
+  fetch: site.socialmedias.toStructure
+  text: "{{ structureItem.name }}"
+  value: "{{ structureItem.icon }}"

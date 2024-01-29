@@ -1,0 +1,9 @@
+type: files
+label: vv-icons.field.icons.select
+query: site.images.template('icon')
+empty: vv-icons.field.icons.empty
+multiple: false
+uploads:
+  template: icon
+image:
+  back: white

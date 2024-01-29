@@ -1,0 +1,9 @@
+type: pages
+label: Humains
+parent: kirby.page("equipe")
+template: human
+image:
+  cover: true
+  query: page.cover.toFile
+  back: white
+  ratio: 1/1

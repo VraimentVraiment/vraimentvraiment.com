@@ -1,0 +1,15 @@
+primary:
+  name: primaryNavigation
+  label: Menu de navigation principal
+  levels: 1
+  help: Éditer le menu de navigation de l'en-tête
+  id: main-nav
+  ariaLabel: Menu principal
+
+secondary:
+  name: secondaryNavigation
+  label: Menu de navigation secondaire
+  levels: 1
+  help: Éditer le menu de navigation du pied de page
+  id: sec-nav
+  ariaLabel: Menu secondaire

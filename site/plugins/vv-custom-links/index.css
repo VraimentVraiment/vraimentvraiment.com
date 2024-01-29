@@ -1,0 +1,20 @@
+.k-block-container-type-custom-link {
+  padding: 3rem 1rem 1rem;
+}
+
+.k-block-container-type-custom-link p {
+  line-height: 1.5;
+}
+
+.k-block-container-type-custom-link p span.text {
+  text-decoration: underline;
+}
+
+.k-block-container-type-custom-link p::before {
+  content: "Lien personnalisé";
+  display: inline-block;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  filter: invert(0.5);
+}

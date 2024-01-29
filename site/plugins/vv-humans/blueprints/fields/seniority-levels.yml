@@ -1,0 +1,19 @@
+label: Niveaux de séniorité
+type: structure
+columns:
+  inclusivename: true
+  details: true
+fields:
+  inclusivename:
+    label: Nom inclusif
+    type: text
+    required: true
+  masculinename:
+    label: Nom masculin
+    type: text
+  femininename:
+    label: Nom féminin
+    type: text
+  details:
+    label: Détails
+    type: text

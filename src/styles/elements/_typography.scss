@@ -1,0 +1,88 @@
+$headings: h1, h2, h3, h4, h5, h6;
+
+#{$headings},
+p,
+a {
+  font-weight: 400;
+}
+
+#{$headings} {
+  line-height: 1;
+  margin-bottom: 1em;
+  margin-top: 1.5em;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+}
+
+h5 {
+  font-size: 1.4rem;
+}
+
+h6 {
+  font-size: 1.2rem;
+}
+
+p {
+  font-size: 1.15rem;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 80ch;
+
+  & + p {
+    margin-top: 1em;
+  }
+}
+
+address {
+  font-style: normal;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+}
+
+.link {
+  text-decoration: underline;
+}
+
+a,
+.link,
+.tag {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+a,
+a:active,
+a:visited,
+button, {
+  color: $color-font-dark;
+}
+
+.custom-link__text {
+  margin-right: 0.25em;
+}

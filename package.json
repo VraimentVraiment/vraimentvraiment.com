@@ -1,0 +1,56 @@
+{
+  "name": "vvsite22",
+  "version": "2.0.0",
+  "description": "Vraiment Vraiment's 2022 website, built with kirby and vite",
+  "keywords": [
+    "vraimentvraiment",
+    "kirby",
+    "cms",
+    "vite"
+  ],
+  "author": "Lucas Poulain (ShallowRed)",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VraimentVraiment/vvsite22.git"
+  },
+  "homepage": "https://github.com/VraimentVraiment/vvsite22#readme",
+  "bugs": {
+    "url": "https://github.com/VraimentVraiment/vvsite22/issues"
+  },
+  "scripts": {
+    "dev": "concurrently \"npm run uno -- --watch\" \"vite\"",
+    "build": "npm run uno && vite build --emptyOutDir",
+    "uno": "unocss \"site/**/{snippets,templates}/**/*\" --out-file src/styles/uno.css",
+    "lint": "eslint src/scripts --ext .js && stylelint \"src/styles/**/*.{css,scss}\" && phpcs"
+  },
+  "dependencies": {
+    "isotope-layout": "^3.0.6"
+  },
+  "devDependencies": {
+    "glob": "^10.3.10",
+    "@iconify-json/ri": "^1.1.15",
+    "@rushstack/eslint-patch": "^1.6.0",
+    "@unocss/cli": "^0.57.7",
+    "@unocss/reset": "^0.57.7",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.54.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-n": "^16.3.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "postcss-combine-duplicated-selectors": "^10.0.3",
+    "postcss-combine-media-query": "^1.0.1",
+    "postcss-normalize": "^10.0.1",
+    "sass": "^1.69.5",
+    "stylelint": "^15.11.0",
+    "stylelint-config-standard-scss": "^11.1.0",
+    "unocss": "^0.57.7",
+    "vite": "^4.4.0",
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-plugin-kirby": "^4.0.0",
+    "vite-plugin-stylelint": "^5.2.1"
+  }
+}

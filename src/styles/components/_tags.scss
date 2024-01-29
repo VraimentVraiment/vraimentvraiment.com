@@ -1,0 +1,54 @@
+$close-tag-size: 1.25em;
+
+.tag {
+  display: inline-block;
+  padding-right: $close-tag-size;
+  font-size: 1rem;
+  text-align: start;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    transform: scaleX(0);
+    background-color: $color-font-dark;
+    transition: transform .2s ease-out;
+    transform-origin: left;
+
+    /* stylelint-disable */
+    /* inset not working on pseudoelement on safari */
+    top: -2px;
+    bottom: -2px;
+    right: calc($close-tag-size - 4px);
+    left: -4px;
+    /* stylelint-enable */
+  }
+
+  .link-background {
+    inset: -2px calc($close-tag-size - 4px) -2px -4px;
+    transition: right 0.2s ease-out;
+  }
+
+  .close-tag {
+    display: none;
+    display: inline-block;
+    position: absolute;
+    color: $color-background;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &.active {
+    color: $color-background;
+
+    &::before {
+      transform: scaleX(1);
+    }
+
+    .link-background,
+    &.active::before {
+      right: -4px;
+    }
+  }
+}

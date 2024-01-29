@@ -1,0 +1,17 @@
+main.home {
+  display: flex;
+  align-items: center;
+
+  p {
+    font-size: 1.75rem !important;
+    line-height: 1.25 !important;
+  }
+
+  & a {
+    font-size: 0.85em !important;
+  }
+
+  .icon {
+    @include slide-in(left, 1);
+  }
+}

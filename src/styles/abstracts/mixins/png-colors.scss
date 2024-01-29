@@ -1,0 +1,46 @@
+@use "sass:map";
+
+$png-colors: (
+  "yellow": (
+    brightness: 1.35,
+    hue-rotate: 0
+  ),
+  "orange": (
+    brightness: 1,
+    hue-rotate: 340
+  ),
+  "green": (
+    brightness: 0.9,
+    hue-rotate: 60
+  ),
+  "blue": (
+    brightness: 0.9,
+    hue-rotate: 180
+  ),
+  "purple": (
+    brightness: 0.5,
+    hue-rotate: 200
+  ),
+  "red": (
+    brightness: 0.75,
+    hue-rotate: 320
+  ),
+);
+
+@mixin png-color($color) {
+  $values: map.get($png-colors, $color);
+  $brightness: map.get($values, brightness);
+  $hue-rotate: map.get($values, hue-rotate);
+
+  filter:
+    invert(0.5) sepia(1) saturate(4) brightness($brightness)
+    hue-rotate(#{$hue-rotate}deg);
+}
+
+@mixin png-colors {
+  @each $color, $values in $png-colors {
+    &.#{$color} {
+      @include png-color($color);
+    }
+  }
+}

@@ -1,0 +1,95 @@
+/*
+ * SITE HEADER
+ */
+
+.site-header {
+  background: $color-background;
+
+  /*
+   * SITE LOGO
+   */
+
+  .site-logo {
+    & svg {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  h1.site-logo {
+    margin: 0;
+    line-height: 0;
+  }
+
+  /*
+   * SITE NAVIGATION MENU TOGGLER
+   */
+
+  button#nav-toggler {
+    .nav-toggler__closed {
+      display: block;
+    }
+
+    .nav-toggler__open {
+      display: none;
+    }
+  }
+
+  &.open button#nav-toggler {
+    & .nav-toggler__closed {
+      display: none;
+    }
+
+    .nav-toggler__open {
+      display: block;
+    }
+  }
+
+  /*
+   * SITE NAVIGATION MENU
+   */
+  nav {
+    display: none;
+    position: fixed;
+    inset: $header-height 0 0 0;
+    margin: 0;
+    margin-top: 1px;
+    background-color: $color-background;
+
+    li {
+      border-bottom: solid 1px $color-font-dark;
+      box-sizing: border-box;
+      margin: 0 2rem;
+
+      @include md {
+        margin: 0 4rem;
+      }
+
+      @include xl {
+        margin: 0 calc(50% - 32rem);
+      }
+
+      @include xxl {
+        margin: 0 calc(50% - 36rem);
+      }
+
+      a {
+        text-decoration: none;
+        padding: 1rem 1.25rem;
+        font-size: 1.75rem;
+
+        @include md {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+
+  &.open nav {
+    display: block;
+
+    & ul {
+      @include slide-in(left, 1);
+    }
+  }
+}

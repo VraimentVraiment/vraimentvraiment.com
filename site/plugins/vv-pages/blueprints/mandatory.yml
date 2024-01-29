@@ -1,0 +1,9 @@
+extends: pages/default
+
+options:
+  title: false
+  delete: false
+  slug: false
+  status: false
+  url: false
+  duplicate: false

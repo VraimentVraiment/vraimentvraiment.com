@@ -1,0 +1,28 @@
+title: Fronts
+
+icon: road-sign
+
+extends: pages/mandatory
+
+tabs:
+  stakes:
+    label: Fronts
+    icon: road-sign
+    columns:
+      - width: 2/3
+        sections:
+          listed:
+            extends: sections/stakes
+            headline: Fronts publiés
+            status: listed
+            empty: Aucun front n'est publié
+            status: listed
+            layout: cards
+            size: tiny
+      - width: 1/3
+        sections:
+          drafts:
+            extends: sections/stakes
+            headline: Fronts en brouillon
+            status: draft
+            empty: Aucun front n'est en mode brouillon

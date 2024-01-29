@@ -1,0 +1,51 @@
+.human {
+  container-type: inline-size;
+
+  .human__expand .icon {
+    color: $color-background;
+  }
+
+
+  .human__info p {
+    font-size: max(.9rem, calc(.55rem + min(.4rem, 1vw)));
+    font-size: max(.9rem, calc(.45rem + 4.5cqi));
+  }
+
+}
+
+.modal {
+  background-color: $color-background;
+
+  .modal-close-container {
+    background-color: $color-background;
+  }
+
+  nav {
+    background-color: $color-background;
+  }
+
+  .modal-close {
+    .link-background {
+      inset: 0 !important;
+    }
+  }
+
+  &.enter {
+    &>* {
+      @include slide-in(left, 1);
+    }
+  }
+
+  nav::before {
+    // background-color: $color-background;
+    background-image: linear-gradient(transparent 0%, $color-background 100%);
+
+    // background-color: linear-gradient(90deg, $color-background 0%, rgb(255 255 255 / 0%) 100%);
+    position: absolute;
+    top: calc(-1rem - 1px);
+    left: 0;
+    right: 0;
+    content: '';
+    height: 1rem;
+  }
+}

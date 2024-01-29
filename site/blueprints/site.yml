@@ -1,0 +1,64 @@
+tabs:
+  pages:
+    label: Pages
+    icon: layers
+    columns:
+      - width: 1/3
+        sections:
+          mainpages:
+            type: pages
+            status: listed
+            headline: Pages principales
+            image:
+              back: black
+      - width: 1/3
+        sections:
+          stakespages:
+            type: pages
+            extends: sections/stakes
+      - width: 1/3
+        sections:
+          listed:
+            headline: Pages brouillon
+            type: pages
+            status: draft
+      - width: 1
+        sections:
+          humanspages:
+            type: pages
+            extends: sections/humans
+            layout: cards
+            size: tiny
+
+  site:
+    label: Site
+    icon: settings
+    columns:
+      - width: 1
+        sections:
+          - sections/navigation-menus
+      - width: 1/2
+          fields:
+            footer:
+              label: Pied de page
+              extends: fields/layout
+      - width: 1/2
+          fields:
+            socialmedias: sections/social-medias
+
+  analytics:
+    label: Audience
+    icon: chart
+    columns:
+      - width: 3/4
+        sections:
+          main:
+            type: matomo-main
+      - width: 1/4
+        sections:
+          sidebar:
+            type: matomo-sidebar
+
+  seo:
+    label: SEO
+    extends: seo

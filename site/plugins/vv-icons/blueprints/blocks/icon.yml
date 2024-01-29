@@ -1,0 +1,6 @@
+name: vv-icons.block.icon
+
+icon: image
+
+fields:
+  icon: fields/icons

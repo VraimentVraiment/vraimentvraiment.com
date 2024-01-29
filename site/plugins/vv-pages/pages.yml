@@ -1,0 +1,43 @@
+home:
+  title: Accueil
+  extends: pages/mandatory
+  icon: home
+
+error:
+  title: Erreur
+  extends: pages/mandatory
+  icon: alert
+  tabs:
+    seo: false
+
+mentions-legales:
+  Title: Mentions légales
+  extends: pages/mandatory
+
+plan-du-site:
+  title: Plan du site
+  extends: pages/mandatory
+
+politique-de-confidentialite:
+  title: Politique de confidentialité
+  extends: pages/mandatory
+
+medias:
+  title: Médias
+  icon: globe
+  extends: pages/default
+
+contact:
+  Title: Nous contacter
+  icon: chat
+  extends: pages/default
+
+equipe:
+  title: Équipe
+  icon: users
+  extends: pages/humans
+
+fronts:
+  title: Fronts
+  icon: road-sign
+  extends: pages/stakes

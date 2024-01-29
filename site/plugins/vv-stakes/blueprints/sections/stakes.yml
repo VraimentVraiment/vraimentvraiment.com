@@ -1,0 +1,7 @@
+type: pages
+label: Pages fronts
+parent: kirby.page("fronts")
+template: stake
+image:
+  query: page.cover.toFile
+  back: white

@@ -1,0 +1,19 @@
+title: Image
+
+accept: 
+  mime: image/*
+  type: image
+  
+columns:
+  - width: 1/2
+    fields:
+      alt:
+        label: Texte alternatif
+        type: text
+      legend:
+        label: Légende
+        type: text
+      focus:
+        label: My Focus Field
+        type: focus
+        width: 1/2

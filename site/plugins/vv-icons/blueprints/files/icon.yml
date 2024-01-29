@@ -1,0 +1,12 @@
+Title: icon
+
+accept:
+  mime: image/svg+xml
+  type: image
+
+columns:
+  - width: 1/2
+    fields:
+      screenreader:
+        label: vv-icons.icons.screenreader.label
+        type: text

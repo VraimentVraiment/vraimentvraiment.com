@@ -1,0 +1,3 @@
+label: Titre public
+type: text
+placeholder: "Par défaut : {{ page.title }}"

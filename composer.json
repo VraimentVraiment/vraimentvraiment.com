@@ -1,0 +1,50 @@
+{
+  "name": "vraimentvraiment/vvsite22",
+  "description": "Vraiment Vraiment's 2022 website",
+  "type": "project",
+  "keywords": [
+    "vraimentvraiment",
+    "kirby",
+    "cms"
+  ],
+  "homepage": "https://vraimentvraiment.com",
+  "authors": [
+    {
+      "name": "Lucas Poulain (ShallowRed)",
+      "email": "lucas@vraimentvraiment.com",
+      "homepage": "https://vraimentvraiment.com"
+    }
+  ],
+  "support": {
+    "email": "lucas@vraimentvraiment.com",
+    "issues": "https://github.com/vraimentvraiment/vvsite22/issues",
+    "source": "https://github.com/vraimentvraiment/vvsite22"
+  },
+  "require": {
+    "php": ">=8.0 <8.1.0",
+    "getkirby/cms": "^3.7",
+    "sylvainjule/matomo": "^1.0",
+    "belugadigital/kirby-navigation": "^3.0",
+    "diesdasdigital/kirby-meta-knight": "^1.2",
+    "afbora/kirby-minify-html": "^1.7",
+    "medienbaecker/autoresize": "^2.1",
+    "felixhaeberle/kirby3-webp": "^1.0",
+    "afbora/kirby-loader": "^2.1",
+    "arnoson/kirby-vite": "^4.0",
+    "fabianmichael/kirby-markdown-field": "^2.1",
+    "flokosiol/focus": "^3.1"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.7"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "allow-plugins": {
+      "getkirby/composer-installer": true
+    }
+  },
+  "extra": {
+    "kirby-cms-path": false,
+    "kirby-plugin-path": "storage/plugins"
+  }
+}
