@@ -52,7 +52,7 @@ Kirby::plugin('vv/sitemap', [
     [
       'pattern' => 'sitemap.xml',
       'action' => function () {
-        return new Response(tpl::load(__DIR__ . '/xml-sitemap.php', []), 'application/xml');
+        return new Response(tpl::load(__DIR__ . '/templates/xml-sitemap.php', []), 'application/xml');
       },
     ],
   ],
