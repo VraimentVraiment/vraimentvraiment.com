@@ -1,0 +1,34 @@
+title: Ressources
+
+extends: pages/default
+
+tabs:
+  resources:
+    label: Ressources
+    icon: book
+    columns:
+      - width: 1
+        sections:
+          draftResources:
+            extends: sections/resources
+            label: Ressources en brouillon
+            status: draft
+            empty: Aucune ressource n'est en mode brouillon
+            limit: 6
+            columns:
+              year: true
+              clientName: true
+              projectName: true
+      - width: 1
+        sections:
+          publishedResources:
+            extends: sections/resources
+            label: Ressources publiées
+            status: listed
+            empty: Aucune ressource n'est publiée
+            layout: cards
+            limit: 200
+            columns:
+              year: true
+              clientName: true
+              projectName: true

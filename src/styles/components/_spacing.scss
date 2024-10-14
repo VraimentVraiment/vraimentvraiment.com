@@ -1,0 +1,159 @@
+.spacing {
+  @apply w-full;
+
+  &.spacing--none {
+    display: none;
+  }
+
+  &.lt-md\:spacing--none {
+    @apply lt-md:hidden;
+  }
+  
+  &.md\:spacing--none {
+    display: none;
+  }
+
+  &.spacing--xs {
+    display: block;
+
+    @apply h-2;
+  }
+  
+  &.spacing--sm {
+    display: block;
+
+    @apply h-4;
+  }
+
+  &.spacing--md {
+    display: block;
+
+    @apply h-8;
+  }
+
+  &.spacing--lg {
+    display: block;
+
+    @apply h-12;
+  }
+
+  &.spacing--xl {
+    display: block;
+
+    @apply h-16;
+  }
+
+  &.spacing--2xl {
+    display: block;
+
+    @apply h-24;
+  }
+
+  &.spacing--3xl {
+    display: block;
+
+    @apply h-32;
+  }
+
+  &.spacing--4xl {
+    display: block;
+
+    @apply h-48;
+  }
+
+  &.lt-md\:spacing--xs {
+    display: block;
+
+    @apply lt-md:h-2;
+  }
+
+  &.lt-md\:spacing--sm {
+    display: block;
+
+    @apply lt-md:h-4;
+  }
+
+  &.lt-md\:spacing--md {
+    display: block;
+
+    @apply lt-md:h-8;
+  }
+
+  &.lt-md\:spacing--lg {
+    display: block;
+
+    @apply lt-md:h-12;
+  }
+
+  &.lt-md\:spacing--xl {
+    display: block;
+
+    @apply lt-md:h-16;
+  }
+
+  &.lt-md\:spacing--2xl {
+    display: block;
+
+    @apply lt-md:h-24;
+  }
+
+  &.lt-md\:spacing--3xl {
+    display: block;
+
+    @apply lt-md:h-32;
+  }
+
+  &.lt-md\:spacing--4xl {
+    display: block;
+
+    @apply lt-md:h-40;
+  }
+
+  &.md\:spacing--xs {
+    display: block;
+
+    @apply md:h-2;
+  }
+
+  &.md\:spacing--sm {
+    display: block;
+
+    @apply md:h-4;
+  }
+
+  &.md\:spacing--md {
+    display: block;
+
+    @apply md:h-8;
+  }
+
+  &.md\:spacing--lg {
+    display: block;
+
+    @apply md:h-12;
+  }
+
+  &.md\:spacing--xl {
+    display: block;
+
+    @apply md:h-16;
+  }
+
+  &.md\:spacing--2xl {
+    display: block;
+
+    @apply md:h-24;
+  }
+
+  &.md\:spacing--3xl {
+    display: block;
+
+    @apply md:h-32;
+  }
+
+  &.md\:spacing--4xl {
+    display: block;
+
+    @apply md:h-40;
+  }
+}

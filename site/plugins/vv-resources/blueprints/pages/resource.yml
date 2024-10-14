@@ -1,0 +1,46 @@
+title: Ressource
+
+status:
+  draft:
+    label: Brouillon
+    text: La ressource est encore en mode brouillon. elle ne peut-être vue que par les éditeurs ayant accès au panel d'administration.
+  listed:
+    label: Publié
+    text: La ressource est publiée et visible par les visiteurs du site.
+
+image:
+  cover: true
+  query: page.content.images.sortBy('sort', 'asc').first.toFile
+  back: white
+
+tabs:
+  content:
+    icon: text
+    columns:
+      - width: 2/3
+        fields:
+          resourcetype:
+            label: Type de ressource
+            type: select
+            options:
+              type: query
+              query: collection('resourcetypes')
+              text: '{{ item.name }}'
+              value: '{{ item.slug }}'
+          description:
+            label: Description
+            type: writer
+            nodes: true
+      - width: 1/3
+        fields:
+          files:
+            type: files
+            label: Fichiers liés
+            help: Uploader ici les fichiers mis à disposition des visiteurs
+      - width: 1
+        fields:
+          images:
+            type: files
+            label: Images illustratives
+            help: Uploader ici les images illustratives de la ressource
+            layout: cards

@@ -1,0 +1,17 @@
+type: structure
+label: Types de ressources
+empty: Aucun type de ressource n'est défini
+limit: 200
+columns:
+  name: true
+fields:
+  name:
+    label: Nom
+    type: text
+  pluralname:
+    label: Nom au pluriel
+    type: text
+  slug:
+    label: Slug
+    type: slug
+    sync: name

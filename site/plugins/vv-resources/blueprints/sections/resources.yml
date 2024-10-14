@@ -1,0 +1,5 @@
+type: pages
+label: Ressources
+parent: kirby.page("ressources")
+template: resource
+search: true

@@ -1,0 +1,15 @@
+.skills-container {
+  @apply relative;
+}
+
+.skills-container__inner {
+  @apply md:absolute h-full left-0 top-O right-0 pb-8 pointer-events-none;
+}
+
+.skills-container__list {
+  @apply md:sticky md:top-32 flex flex-col items-start pointer-events-auto
+}
+
+.skills-container__list-item {
+  @apply first:mt-0 mt-4;
+}

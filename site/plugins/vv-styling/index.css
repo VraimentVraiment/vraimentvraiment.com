@@ -1,0 +1,121 @@
+.k-block-type-text .text-xs [contenteditable="true"] { font-size: 0.75rem; }
+.k-block-type-text .text-sm [contenteditable="true"] { font-size: 0.875rem; }
+.k-block-type-text .text-md [contenteditable="true"] { font-size: 1rem; }
+.k-block-type-text .text-lg [contenteditable="true"] { font-size: 1.125rem; }
+.k-block-type-text .text-xl [contenteditable="true"] { font-size: 1.25rem; }
+.k-block-type-text .text-2xl [contenteditable="true"] { font-size: 1.5rem; }
+.k-block-type-text .text-3xl [contenteditable="true"] { font-size: 1.875rem; }
+.k-block-type-text .text-4xl [contenteditable="true"] { font-size: 2.25rem; }
+.k-block-type-text .text-5xl [contenteditable="true"] { font-size: 3rem; }
+.k-block-type-text .text-6xl [contenteditable="true"] { font-size: 3.75rem; }
+.k-block-type-text .text-7xl [contenteditable="true"] { font-size: 4.5rem; }
+.k-block-type-text .text-8xl [contenteditable="true"] { font-size: 6rem; }
+
+/* .k-block-type-text .mobile\:text-xs { font-size: 0.75rem; }
+.k-block-type-text .mobile\:text-sm { font-size: 0.875rem; }
+.k-block-type-text .mobile\:text-md { font-size: 1rem; }
+.k-block-type-text .mobile\:text-lg { font-size: 1.125rem; }
+.k-block-type-text .mobile\:text-xl { font-size: 1.25rem; }
+.k-block-type-text .mobile\:text-2xl { font-size: 1.5rem; }
+.k-block-type-text .mobile\:text-3xl { font-size: 1.875rem; }
+.k-block-type-text .mobile\:text-4xl { font-size: 2.25rem; }
+.k-block-type-text .mobile\:text-5xl { font-size: 3rem; }
+.k-block-type-text .mobile\:text-6xl { font-size: 3.75rem; }
+.k-block-type-text .mobile\:text-7xl { font-size: 4.5rem; }
+.k-block-type-text .mobile\:text-8xl { font-size: 6rem; } */
+
+.k-block-type-spacing .spacing-block {
+  cursor: pointer;
+  display: flex;
+  padding: 1rem;
+  flex-direction: row;
+  align-items: center;
+  gap: 4rem;
+}
+
+.k-block-type-spacing .wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.k-block-type-spacing .spacing-block .text {
+  font-size: 14px;
+  color: #bbb;
+}
+
+.k-block-type-spacing .spacing-block .k-icon {
+  opacity: 0.5;
+}
+
+.k-block-type-spacing .spacing-block .line {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.size-label {
+  position: absolute;
+  top: 50%;
+  left: -0.25rem;
+  transform: translate(-100%, -50%);
+  font-size: 10px;
+  color: #bbb;
+}
+
+.k-block-type-spacing .spacing-block .arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.k-block-type-spacing .spacing-block .line__inner {
+  flex: 1;
+  border-left: 1px dashed #bbb;
+  margin: 4px 0;
+}
+
+.k-block-type-spacing .spacing-block .arrow.up {
+  border-color: #bbb transparent transparent;
+  border-width: 10px 5px 0;
+}
+
+.k-block-type-spacing .spacing-block .arrow.down {
+  border-width: 0 5px 10px;
+  border-color: transparent transparent #bbb;
+}
+
+.k-block-type-spacing .line.size--xs { 
+  height: 2rem; 
+}
+
+.k-block-type-spacing .line.size--sm { 
+  height: 2.5rem; 
+}
+
+.k-block-type-spacing .line.size--md { 
+  height: 3rem; 
+}
+
+.k-block-type-spacing .line.size--lg { 
+  height: 3.5rem; 
+}
+
+.k-block-type-spacing .line.size--xl { 
+  height: 4rem; 
+}
+
+.k-block-type-spacing .line.size--2xl {
+  height: 5rem;
+}
+
+.k-block-type-spacing .line.size--3xl {
+  height: 6rem;
+}
+
+.k-block-type-spacing .line.size--4xl {
+  height: 7rem;
+}

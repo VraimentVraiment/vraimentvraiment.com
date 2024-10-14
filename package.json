@@ -1,0 +1,55 @@
+{
+  "name": "vraimentvraiment.com",
+  "type": "module",
+  "version": "3.0.0",
+  "description": "Vraiment Vraiment's website",
+  "author": "Lucas Poulain (ShallowRed)",
+  "license": "MIT",
+  "homepage": "https://github.com/VraimentVraiment/vraimentvraiment.com#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VraimentVraiment/vraimentvraiment.com.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VraimentVraiment/vraimentvraiment.com/issues"
+  },
+  "keywords": [
+    "vraimentvraiment",
+    "kirby",
+    "cms",
+    "vite"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run uno -- --watch\" \"vite\"",
+    "build": "npm run uno && vite build --emptyOutDir",
+    "uno": "unocss \"site/**/{snippets,templates}/**/*\" --out-file src/styles/uno.css",
+    "lint": "eslint src/scripts && stylelint \"src/styles/**/*.{css,scss}\" && phpcs"
+  },
+  "dependencies": {
+    "@unseenco/taxi": "^1.7.0",
+    "bowser": "^2.11.0",
+    "isotope-layout": "^3.0.6"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^3.7.2",
+    "@iconify-json/ri": "^1.2.0",
+    "@unocss/cli": "^0.62.4",
+    "@unocss/reset": "^0.62.4",
+    "@unocss/transformer-directives": "^0.62.4",
+    "concurrently": "^9.0.1",
+    "eslint": "^9.11.1",
+    "glob": "^11.0.0",
+    "postcss-combine-duplicated-selectors": "^10.0.3",
+    "postcss-combine-media-query": "^1.0.1",
+    "postcss-normalize": "^13.0.1",
+    "sass": "^1.79.3",
+    "stylelint": "^16.9.0",
+    "stylelint-config-standard-scss": "^13.1.0",
+    "unocss": "^0.62.4",
+    "vite": "^5.4.8",
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-plugin-kirby": "^5.3.1",
+    "vite-plugin-sass-glob-import": "^3.0.2",
+    "vite-plugin-stylelint": "^5.3.1"
+  }
+}

@@ -1,0 +1,37 @@
+.resources {
+  @apply flex flex-col;
+}
+
+.resources__header {
+  @apply pb-8 md:pb-4;
+  @apply flex flex-col md:flex-row gap-4 md:items-end md:justify-between;
+  
+  .resources__title {
+    @apply flex flex-row items-end lt-md:justify-between gap-4;
+
+    h2 {
+      @apply m-0;
+    }
+
+    .current-page-indicator {
+      @apply mb-1.5 min-w-24 lt-md:text-right;
+    }
+  }
+
+  .resources__filters {
+    @apply flex flex-row gap-4 md:pb-1.5;
+
+    .resources__filters-title {
+      @apply text-lg mb-0;
+    }
+  }
+
+  .resourcetypes__list {
+    @apply flex flex-wrap gap-4 md:gap-x-8;
+  }
+}
+
+.resources__content {
+  @apply py-12;
+  @apply border-y border-solid border-border;
+}

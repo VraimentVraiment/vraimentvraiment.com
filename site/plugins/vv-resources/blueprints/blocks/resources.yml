@@ -1,0 +1,21 @@
+name: Navigation à facettes de ressources
+
+icon: grid
+
+preview: fields
+wysiwyg: true
+
+fields:
+  title:
+    label: Title
+    type: text
+  introduction:
+    label: Introduction
+    extends: fields/layout
+    fieldsets:
+      styling:
+        fieldsets:
+          columns: false
+      custom:
+        fieldsets:
+          resources: false

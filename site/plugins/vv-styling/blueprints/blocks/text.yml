@@ -1,0 +1,99 @@
+name: field.blocks.text.name
+icon: text
+wysiwyg: true
+preview: text
+fields:
+  text:
+    type: writer
+    placeholder: field.blocks.text.placeholder
+    nodes:
+      - paragraph
+      - bulletList
+      - orderedList
+      - quote
+      - heading
+      - textSize
+      - geolink
+    toolbar:
+      marks:
+        - bold
+        - italic
+        - underline
+        - strike
+        - sub
+        - sup
+        - code
+        - '|'
+        - link
+        - email
+        - '|'
+        - clear
+        - geolink
+  align:
+    label: Alignement
+    type: toggles
+    options:
+      - text: Gauche
+        value: left
+        icon: text-left
+      - text: Centre
+        value: center
+        icon: text-center
+      - text: Droite
+        value: right
+        icon: text-right
+  mobile_align:
+    label: Alignement mobile (optionnel, utilise l'alignement normal si vide)
+    type: toggles
+    options:
+      - text: Gauche
+        value: left
+        icon: text-left
+      - text: Centre
+        value: center
+        icon: text-center
+      - text: Droite
+        value: right
+        icon: text-right
+  # vertical_align:
+  #   label: Alignement vertical
+  #   type: toggles
+  #   options:
+  #     - text: Bas
+  #       value: bottom
+  #     - text: Centre
+  #       value: middle
+  #     - text: Haut
+  #       value: top
+  size:
+    label: Taille
+    type: toggles
+    options:
+      - xs
+      - sm
+      - md
+      - lg
+      - xl
+      - 2xl
+      - 3xl
+      - 4xl
+      - 5xl
+      - 6xl
+      - 7xl
+      - 8xl
+  mobile_size:
+    label: Taille mobile (optionnel, utilise la taille normale si vide)
+    type: toggles
+    options:
+      - xs
+      - sm
+      - md
+      - lg
+      - xl
+      - 2xl
+      - 3xl
+      - 4xl
+      - 5xl
+      - 6xl
+      - 7xl
+      - 8xl

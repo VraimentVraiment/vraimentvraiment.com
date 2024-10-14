@@ -1,0 +1,19 @@
+.resource {
+  .resource__title {
+    @apply text-xl lt-md:text-2xl mb-4;
+  }
+
+  .resource__description {
+    p {
+      @apply text-base lt-md:text-lg;
+
+      + p {
+        @apply mt-6 md:mt-4;
+      }
+    }
+  }
+}
+
+.resources__intro {
+  @apply pb-12;
+}

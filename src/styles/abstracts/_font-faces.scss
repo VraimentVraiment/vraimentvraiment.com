@@ -1,0 +1,11 @@
+$main-font-name: "Helvetica Neue LT Std";
+$main-font-url: "@/assets/fonts/helvetica/helvetica.woff";
+$font-family: $main-font-name, helvetica, arial, -apple-system, system-ui, blinkmacsystemfont, sans-serif;
+
+@font-face {
+  font-family: $main-font-name;
+  src: url("#{$main-font-url}2") format("woff2"), url("#{$main-font-url}") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

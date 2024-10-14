@@ -1,0 +1,322 @@
+$headings: h1, h2, h3, h4, h5, h6;
+$texts: p, blockquote, pre, code;
+
+%title-5xl {
+  @apply text-8xl/1em;
+}
+
+%title-4xl {
+  @apply text-7xl/1em;
+}
+
+%title-3xl {
+  @apply text-6xl/1em;
+}
+
+%title-2xl {
+  @apply text-5xl/tight;
+}
+
+%title-xl {
+  @apply text-4xl/snug;
+}
+
+%title-lg {
+  @apply text-3xl/snug;
+}
+
+%title-md {
+  @apply text-2xl/normal;
+}
+
+%title-xs {
+  @apply text-lg/relaxed;
+}
+
+%title-sm {
+  @apply text-xl/relaxed;
+}
+
+h1 {
+  @extend %title-2xl;
+}
+
+h2 {
+  @extend %title-xl;
+}
+
+h3 {
+  @extend %title-lg;
+}
+
+h4 {
+  @extend %title-md;
+}
+
+h5 {
+  @extend %title-sm;
+}
+
+h6 {
+  @extend %title-xs;
+}
+
+#{$headings} {
+  font-weight: 400;
+  
+  &.heading--5xl {
+    @extend %title-5xl;
+  }
+
+  &.heading--4xl {
+    @extend %title-4xl;
+  }
+
+  &.heading--3xl {
+    @extend %title-2xl;
+  }
+
+  &.heading--2xl {
+    @extend %title-2xl;
+  }
+
+  &.heading--xl {
+    @extend %title-xl;
+  }
+
+  &.heading--lg {
+    @extend %title-lg;
+  }
+
+  &.heading--md {
+    @extend %title-md;
+  }
+
+  &.heading--sm {
+    @extend %title-sm;
+  }
+
+  &.heading--xs {
+    @extend %title-xs;
+  }
+
+  &.lt-md\:heading--5xl {
+    @apply lt-md:text-8xl/1em;
+  }
+
+  &.lt-md\:heading--4xl {
+    @apply lt-md:text-7xl/1em;
+  }
+
+  &.lt-md\:heading--3xl {
+    @apply lt-md:text-6xl/1em;
+  }
+
+  &.lt-md\:heading--2xl {
+    @apply lt-md:text-5xl/tight;
+  }
+
+  &.lt-md\:heading--xl {
+    @apply lt-md:text-4xl/snug;
+  }
+
+  &.lt-md\:heading--lg {
+    @apply lt-md:text-3xl/snug;
+  }
+
+  &.lt-md\:heading--md {
+    @apply lt-md:text-2xl/normal;
+  }
+
+  &.lt-md\:heading--sm {
+    @apply lt-md:text-xl/relaxed;
+  }
+
+  &.lt-md\:heading--xs {
+    @apply lt-md:text-lg/relaxed;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 1em;
+  }
+  
+  &:not(:first-child) {
+    margin-top: 1.5em;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+#{$texts} {
+  @apply text-lg/relaxed m-0 prose;
+
+  & + & {
+    margin-top: 1.5em;
+  }
+
+  &.text--8xl {
+    @apply text-5xl/1em;
+
+    @include md {
+      @apply text-8xl/1em;
+    }
+  }
+
+  &.text--7xl {
+    @apply text-7xl/1em;
+  }
+
+  &.text--6xl {
+    @apply text-6xl/1em;
+  }
+
+  &.text--5xl {
+    @apply text-5xl/tight;
+
+    @include md {
+      @apply text-5xl/tight;
+    }
+  }
+
+  &.text--4xl {
+    @apply text-4xl/snug;
+  }
+
+  &.text--3xl {
+    @apply text-3xl/snug;
+  }
+
+  &.text--2xl {
+    @apply text-2xl/normal;
+  }
+
+  &.text--xl {
+    @apply text-xl/relaxed;
+  }
+
+  &.text--lg {
+    @apply text-lg/relaxed;
+  }
+
+  &.text--md {
+    @apply text-base/relaxed lt-md:text-lg/relaxed;
+  }
+
+  &.text--sm {
+    @apply text-sm/relaxed;
+  }
+
+  &.text--xs {
+    @apply text-xs/relaxed;
+  }
+
+  &.text--right {
+    @apply text-right;
+  }
+
+  &.text--left {
+    @apply text-left;
+  }
+
+  &.text--justify {
+    @apply text-justify;
+  }
+
+  &.text--top {
+    @apply text-top;
+  }
+
+  &.text--bottom {
+    @apply text-bottom;
+  }
+
+  &.text--middle {
+    @apply flex items-center justify-center h-full;
+  }
+
+  &.text--center {
+    @apply text-center;
+  }
+
+  &.lt-md\:text--7xl {
+    @apply lt-md\:text-7xl/1em;
+  }
+
+  &.lt-md\:text--6xl {
+    @apply lt-md\:text-6xl/1em;
+  }
+
+  &.lt-md\:text--5xl {
+    @apply lt-md\:text-5xl/tight;
+
+    @include md {
+      @apply lt-md\:text-5xl/tight;
+    }
+  }
+
+  &.lt-md\:text--4xl {
+    @apply lt-md\:text-4xl/snug;
+  }
+
+  &.lt-md\:text--3xl {
+    @apply lt-md\:text-3xl/snug;
+  }
+
+  &.lt-md\:text--2xl {
+    @apply lt-md\:text-2xl/normal;
+  }
+
+  &.lt-md\:text--xl {
+    @apply lt-md\:text-xl/relaxed;
+  }
+
+  &.lt-md\:text--lg {
+    @apply lt-md\:text-lg/relaxed;
+  }
+
+  &.lt-md\:text--md {
+    @apply lt-md\:text-base/relaxed lt-md:lt-md\:text-lg/relaxed;
+  }
+
+  &.lt-md\:text--sm {
+    @apply lt-md\:text-sm/relaxed;
+  }
+
+  &.lt-md\:text--xs {
+    @apply lt-md\:text-xs/relaxed;
+  }
+
+  &.lt-md\:text--right {
+    @apply lt-md\:text-right;
+  }
+
+  &.lt-md\:text--left {
+    @apply lt-md\:text-left;
+  }
+
+  &.lt-md\:text--justify {
+    @apply lt-md\:text-justify;
+  }
+
+  &.lt-md\:text--top {
+    @apply lt-md\:text-top;
+  }
+
+  &.lt-md\:text--bottom {
+    @apply lt-md\:text-bottom;
+  }
+
+  &.lt-md\:text--middle {
+    @apply flex items-center justify-center h-full;
+  }
+
+  &.lt-md\:text--center {
+    @apply lt-md\:text-center;
+  }
+}

@@ -1,0 +1,44 @@
+.site-header nav {
+  @apply fixed m-0 inset-0 bg-bg;
+
+  display: none;
+  transform: translateY(calc($header-height + 1px));
+
+  @include main-column;
+
+  li {
+    @apply border-b border-solid border-border;
+
+    a {
+      @apply inline-block py-0.5em px-0.25em text-2xl decoration-none;
+    }
+  }
+}
+
+.static-menu-page nav {
+  display: block;
+}
+
+html.nav-open nav {
+  display: block;
+
+  & ul {
+    @include slide-in-right;
+  }
+}
+
+html.closing-nav .site-header nav {
+  display: block;
+
+  & ul {
+    @include slide-out-right;
+  }
+}
+
+html.closing-nav [data-taxi] {
+  display: none;
+}
+
+.current-page-icon {
+  display: none;
+}

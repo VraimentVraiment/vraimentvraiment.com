@@ -1,0 +1,35 @@
+.siblings-pagination {
+  @apply mt-24 border-t-solid absolute bottom-0 right-0 left-0;
+
+  .siblings-pagination__inner {
+    @apply flex justify-between items-center gap-2 md:gap-4 lg:gap-8;
+    @apply py-4 px-1 mt-2;
+    @apply border-t border-solid border-border;
+  }
+}
+
+.siblings-pagination__item {
+  @apply m-0;
+  
+  a {
+    @apply flex justify-end items-center text-lg gap-2;
+
+    .siblings-pagination__item-icon {
+      @apply block min-w-1em min-h-1em;
+    }
+  }
+
+  &.siblings-pagination__item--prev a {
+    @apply flex-row-reverse;
+
+    .siblings-pagination__item-icon {
+      @apply i-ri-arrow-left-line;
+    }
+  }
+
+  &.siblings-pagination__item--next a {
+    .siblings-pagination__item-icon {
+      @apply i-ri-arrow-right-line;
+    }
+  }
+}

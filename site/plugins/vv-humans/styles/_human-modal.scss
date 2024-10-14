@@ -1,0 +1,78 @@
+.modal-content {
+  @apply flex flex-col md:flex-row pt-4 pb-4 pl-4 pr-4 md:pr-4;
+
+  .human__cover,
+  .human__content {
+    @apply size-72 sm:size-80 lg:size-92;
+  }
+
+  .human__content {
+    /* stylelint-disable-next-line scss/operator-no-unspaced */
+    @apply h-[calc(100vh-22rem)] sm:h-80 lg:h-92 pt-4 md:pl-4;
+    @apply flex flex-col;
+
+    .human__info {
+      @apply flex-1 overflow-auto md:pl-4;
+    }
+
+    .human__names {
+      @apply pr-4 text-4xl;
+    }
+
+    .human_profession {
+      @apply mt-6 leading-tight;
+    }
+
+    .human__seniority-details {
+      @apply text-sm mt-0;
+    }
+  }
+
+  .human__details {
+    @apply mt-5 pb-8;
+
+    .human__skills {
+      @apply list-disc pl-4 mt-0;
+    }
+
+    .human__skill {
+      @apply text-sm;
+    }
+  }
+
+  .human__pagination {
+    .human__pagination-inner {
+      @apply relative flex justify-between align-center;
+      @apply pt-4 pb-1;
+      @apply border-t border-solid border-border;
+
+      &::before {
+        @apply absolute left-0 right-0;
+
+        $linear-height: 2rem;
+
+        background-image: linear-gradient(to top, $color-background 0%, rgb(255 255 255 / 0%) 100%);
+        top: calc(-#{$linear-height} - 1px);
+        content: '';
+        height: $linear-height;
+      }
+    }
+
+    .human__previous,
+    .human__next {
+      p {
+        @apply text-sm;
+      }
+
+      .icon {
+        @apply i-ri-arrow-left-s-line;
+      }
+    }
+
+    .human__next {
+      .icon {
+        @apply transform rotate-180;
+      }
+    }
+  }
+}

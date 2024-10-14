@@ -1,0 +1,52 @@
+.human {
+  .human__inner {
+    --offset-y: 0em !important;
+    --offset-x: 0em !important;
+
+    display: block;
+    text-decoration: none;
+    container-type: inline-size;
+  }
+
+  .human__cover {
+    @apply p-4px;
+  }
+
+  .human__info {
+    @apply pl-2 pr-4 py-1;
+
+    font-size: max(.9rem, calc(.55rem + min(.4rem, 1vw)));
+    font-size: max(.9rem, calc(.45rem + 4.5cqi));
+
+    p {
+      font-size: 1em;
+
+      @apply leading-normal;
+
+      &.human__names {
+        font-size: 1.2em;
+      }
+    }
+
+    .human_profession {
+      @apply mt-1;
+    }
+
+    .human__seniority-details {
+      @apply hidden;
+    }
+  }
+
+  .human__details {
+    @apply hidden;
+  }
+
+  .human__expand {
+    @apply pt-2 pb-1 flex justify-end text-xl transform translate-x-2;
+
+    .human__expand-icon {
+      @apply i-ri-add-line;
+      @apply bg-bg;
+    }
+  }
+}

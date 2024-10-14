@@ -1,0 +1,213 @@
+@use 'sass:math';
+@use 'sass:map';
+
+$slide-offset-length: 1rem;
+$slide-timing-function: linear;
+$slide-start: 0.15;
+$slide-coef: 0.75;
+$slide-end: $slide-coef + $slide-start * (1 - $slide-coef);
+
+@mixin hidden-right {
+  opacity: 0.001;
+  transform: translateX(-$slide-offset-length);
+}
+
+@mixin hidden-left {
+  opacity: 0.001;
+  transform: translateX($slide-offset-length);
+}
+
+@mixin hidden-bottom {
+  opacity: 0.001;
+  transform: translateY($slide-offset-length);
+}
+
+@mixin hidden-top {
+  opacity: 0.001;
+  transform: translateY(-$slide-offset-length);
+}
+
+@mixin shown {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@keyframes slide-in-right {
+  0% {
+    @include hidden-right;
+  }
+
+  #{$slide-start * 100%} {
+    @include hidden-right;
+  }
+
+  #{$slide-end * 100%} {
+    @include shown;
+  }
+
+  100% {
+    @include shown;
+  }
+}
+
+@keyframes slide-out-right {
+  0% {
+    @include shown;
+  }
+
+  #{$slide-start * 100%} {
+    @include shown;
+  }
+
+  #{$slide-end * 100%} {
+    @include hidden-left;
+  }
+
+  100% {
+    @include hidden-left;
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    @include hidden-left;
+  }
+
+  #{$slide-start * 100%} {
+    @include hidden-left;
+  }
+
+  #{$slide-end * 100%} {
+    @include shown;
+  }
+
+  100% {
+    @include shown;
+  }
+}
+
+@keyframes slide-out-left {
+  0% {
+    @include shown;
+  }
+
+  #{$slide-start * 100%} {
+    @include shown;
+  }
+
+  #{$slide-end * 100%} {
+    @include hidden-right;
+  }
+
+  100% {
+    @include hidden-right;
+  }
+}
+
+@keyframes slide-in-up {
+  0% {
+    @include hidden-bottom;
+  }
+
+  #{$slide-start * 100%} {
+    @include hidden-bottom;
+  }
+
+  #{$slide-end * 100%} {
+    @include shown;
+  }
+
+  100% {
+    @include shown;
+  }
+}
+
+@keyframes slide-out-up {
+  0% {
+    @include shown;
+  }
+
+  #{$slide-start * 100%} {
+    @include shown;
+  }
+
+  #{$slide-end * 100%} {
+    @include hidden-top;
+  }
+
+  100% {
+    @include hidden-top;
+  }
+}
+
+@mixin slide-in-right {
+  animation: slide-in-right $slide-duration ease-out forwards;
+
+  @include lt-md {
+    animation: slide-in-right $slide-duration-mobile ease-out forwards;
+  }
+}
+
+@mixin slide-out-right {
+  animation: slide-out-right $slide-duration ease-in forwards;
+
+  @include lt-md {
+    animation: slide-out-right $slide-duration-mobile ease-in forwards;
+  }
+}
+
+@mixin slide-in-left {
+  animation: slide-in-left $slide-duration ease-out forwards;
+
+  @include lt-md {
+    animation: slide-in-left $slide-duration-mobile ease-out forwards;
+  }
+}
+
+@mixin slide-out-left {
+  animation: slide-out-left $slide-duration ease-in forwards;
+
+  @include lt-md {
+    animation: slide-out-left $slide-duration ease-in forwards;
+  }
+}
+
+@mixin slide-in-up {
+  animation: slide-in-up $slide-duration ease-out forwards;
+
+  @include lt-md {
+    animation: slide-in-up $slide-duration-mobile ease-out forwards;
+  }
+}
+
+@mixin slide-out-up {
+  animation: slide-out-up $slide-duration ease-in forwards;
+
+  @include lt-md {
+    animation: slide-out-up $slide-duration-mobile ease-in forwards;
+  }
+}
+
+.slide-in-right {
+  @include slide-in-right;
+}
+
+.slide-out-left {
+  @include slide-out-left;
+}
+
+.slide-in-left {
+  @include slide-in-left;
+}
+
+.slide-out-right {
+  @include slide-out-right;
+}
+
+.slide-in-up {
+  @include slide-in-up;
+}
+
+.slide-out-down {
+  @include slide-out-up;
+}

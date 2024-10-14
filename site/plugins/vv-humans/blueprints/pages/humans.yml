@@ -1,0 +1,31 @@
+title: Humains
+
+icon: user
+
+extends: pages/default
+
+tabs:
+
+  humans:
+    label: Humains
+    icon: users
+    columns:
+      - width: 1
+        sections:
+          drafthumans:
+            extends: sections/humans
+            label: Humains en brouillon
+            status: draft
+            empty: Aucun humain n'est en mode brouillon
+            layout: cards
+            size: tiny
+            limit: 6
+          listedhumans:
+            extends: sections/humans
+            label: Humains publiés
+            status: listed
+            empty: Aucun humain n'est publié
+            layout: cards
+            search: true
+            size: small
+            limit: 200

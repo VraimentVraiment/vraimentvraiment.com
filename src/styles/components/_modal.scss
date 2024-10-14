@@ -1,0 +1,66 @@
+/* stylelint-disable scss/operator-no-unspaced */
+#modal-hider {
+  @apply fixed z-998 top-0 left-0 right-0 bottom-0 pointer-events-none;
+  @apply bg-black;
+  @apply opacity-0 transition-opacity duration-300 ease-in-out;
+
+  &.shown {
+    @apply opacity-20 pointer-events-auto;
+  }
+}
+
+.modal {
+  @apply hidden fixed z-999 outline-none;
+
+  html.js & {
+    @apply top-50%  right-50% transform -translate-y-50% translate-x-50%;
+  }
+  
+  html.no-js & {
+    top: calc(50vh - $header-height);
+
+    @apply hidden fixed z-999 outline-none;
+    @apply  right-50% transform translate-x-50% -translate-y-50%;
+  }
+
+  .modal__inner {
+    @apply bg-bg relative border border-solid border-border;
+
+    box-shadow: 0 0 1rem rgb(0 0 0 / 20%);
+  }
+
+  &.is-open {
+    @apply block;
+  }
+
+  .modal-close-container {
+    @apply absolute z-10 right-1 top-1 p-1;
+    @apply bg-bg;
+
+    .modal-close {
+      @apply cursor-pointer p-1 w-8 h-8;
+      @apply flex items-center justify-center;
+
+      .modal-close__icon {
+        @apply i-ri-close-line;
+        @apply text-lg;
+      }
+
+      .link-background {
+        inset: 0 !important;
+      }
+    }
+  }
+
+  &.enter {
+    .modal__inner {
+      @include slide-in-right;
+    }
+  }
+
+  &.leave {
+    .modal__inner {
+      @include slide-out-right;
+    }
+  }
+}

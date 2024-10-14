@@ -1,0 +1,14 @@
+name: Colonnes
+label: Colonnes
+icon: columns
+
+fields:
+  layout:
+    extends: fields/layout
+    fieldsets:
+      styling:
+        fieldsets:
+          columns: false
+      custom:
+        fieldsets:
+          resources: false
