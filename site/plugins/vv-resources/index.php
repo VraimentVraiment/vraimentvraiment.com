@@ -1,5 +1,9 @@
 <?php
 
+load([
+  'ResourcePage' => 'models/resource.php',
+], __DIR__);
+
 Kirby::plugin('vv/resources', [
 
   'collections' => [
@@ -35,6 +39,10 @@ Kirby::plugin('vv/resources', [
   "controllers" => [
     "resource" => require_once __DIR__ . '/controllers/resource-page.php',
     "resources.json" => require_once __DIR__ . '/controllers/resources.json.php',
+  ],
+
+  'pageModels' => [
+    'resource' => ResourcePage::class
   ],
 
   'siteMethods' => [
