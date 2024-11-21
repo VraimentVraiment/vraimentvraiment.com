@@ -23,15 +23,17 @@ Kirby::plugin('vv/resources', [
     'blocks/resources' => __DIR__ . '/snippets/blocks/resources.php',
     'resources-list' => __DIR__ . '/snippets/resources-list.php',
     'resourcetypes' => __DIR__ . '/snippets/resourcetypes.php',
-    'resource' => __DIR__ . '/snippets/resource.php',
-    'resource.controller' => require_once __DIR__ . '/controllers/resource.php',
+    'resource-card' => __DIR__ . '/snippets/resource-card.php',
+    'resource-card.controller' => require_once __DIR__ . '/controllers/resource-card.php',
   ],
 
   "templates" => [
+    "resource" => __DIR__ . '/templates/resource.php',
     "resources" => __DIR__ . '/templates/resources.php',
     "resources.json" => __DIR__ . '/templates/resources.json.php',
   ],
   "controllers" => [
+    "resource" => require_once __DIR__ . '/controllers/resource-page.php',
     "resources.json" => require_once __DIR__ . '/controllers/resources.json.php',
   ],
 
@@ -46,12 +48,12 @@ Kirby::plugin('vv/resources', [
     },
   ],
 
-  'routes' => [
-    [
-      'pattern' => '/ressources/(:any)',
-      'action' => function () {
-          return go(page('ressources'), 301);
-      },
-    ],
-  ],
+  // 'routes' => [
+  //   [
+  //     'pattern' => '/ressources/(:any)',
+  //     'action' => function () {
+  //         return go(page('ressources'), 301);
+  //     },
+  //   ],
+  // ],
 ]);

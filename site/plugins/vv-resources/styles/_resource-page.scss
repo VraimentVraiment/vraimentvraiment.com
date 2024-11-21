@@ -1,0 +1,49 @@
+.back-link {
+  @apply flex items-center mb-8 text-base;
+}
+
+.back-link__icon {
+  @apply i-ri-arrow-left-line;
+}
+
+.resource-page {
+  &__container {
+    @apply flex flex-col md:flex-row gap-8 md:gap-16 mb-16;
+  }
+
+  &__content {
+    @apply flex-1;
+  }
+
+  &__header {
+    @apply mb-8;
+  }
+
+  &__title {
+    @apply text-4xl md:text-5xl font-medium;
+  }
+
+  &__description {
+    @apply text-lg md:text-xl;
+  }
+
+  &__main-image {
+    @apply flex-1;
+
+    img {
+      @apply w-full h-full object-cover;
+    }
+  }
+
+  &__images {
+    @apply flex flex-wrap m--8;
+  }
+
+  &__image {
+    @apply w-full md:w-1/2 lg:w-1/3 p-8;
+
+    img {
+      @apply w-full h-full object-cover;
+    }
+  }
+}
