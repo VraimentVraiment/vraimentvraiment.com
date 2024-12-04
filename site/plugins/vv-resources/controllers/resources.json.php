@@ -60,7 +60,7 @@ return function ($site, $page, $queryNeeded = false) {
     [
       'containerSelector' => '.resources-list',
       'itemSelector' => '.k-grid-item',
-      'itemInnerSelector' => '.resource',
+      'itemInnerSelector' => '.resource-card',
       'data' => $resourcesList,
       'isotope' => true,
     ],
