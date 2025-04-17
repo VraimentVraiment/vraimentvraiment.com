@@ -65,6 +65,7 @@ export default defineConfig({
     'i-ri-instagram-fill',
     'i-ri-linkedin-box-fill',
     'i-ri-github-fill',
+    'i-ri-bluesky-fill',
     'items-center',
   ],
 })
