@@ -5,8 +5,11 @@
 use Kirby\Uuid\Uuid;
 
 return [
+  'debug' => false,
   'languages' => true,
   'languages.detect' => true,
+
+  'tobimori.seo.robots.content' => "User-agent: *\nAllow: /\nDisallow: /panel",
 
   'smartypants' => true,
 
