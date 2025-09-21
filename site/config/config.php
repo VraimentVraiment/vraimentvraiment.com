@@ -9,8 +9,6 @@ return [
   'languages' => true,
   'languages.detect' => true,
 
-  'tobimori.seo.robots.content' => "User-agent: *\nAllow: /\nDisallow: /panel",
-
   'smartypants' => true,
 
   'tobimori.seo' => [
@@ -19,6 +17,7 @@ return [
     'sitemap' => [
       'excludeTemplates' => ['human', 'resource'],
     ],
+    'robots.content' => "User-agent: *\nAllow: /\nDisallow: /panel",
   ],
 
   'shallowred.html-sitemap.ignore' => [
